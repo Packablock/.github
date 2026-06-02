@@ -1,5 +1,7 @@
 # 🛡️ Packablock: Zero-Trust Supply Chain Trust Registry
 
+[![Registry CI Status](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml/badge.svg)](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml) [![Client CI Status](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml/badge.svg)](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml)
+
 Packablock orchestrates **decentralized, zero-trust package attestation and supply chain trust ledgers** to protect developer workflows from split-timeline attacks, dependency regressions, and malicious software injections.
 
 By combining native cryptographic signing (SSH/GPG), automated CI/CD gating, and real-time SemVer intelligence pipelines, Packablock guarantees absolute transparency and verification for all software artifacts.
