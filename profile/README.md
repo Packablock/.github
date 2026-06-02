@@ -1,6 +1,6 @@
 # 🛡️ Packablock: Zero-Trust Supply Chain Trust Registry
 
-[![Registry CI Status](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml/badge.svg)](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml) [![Client CI Status](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml/badge.svg)](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml)
+[![Registry CI Status](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml/badge.svg)](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml) [![Client CI Status](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml/badge.svg)](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml) [![Web CI Status](https://github.com/Packablock/packablock-web/actions/workflows/ci.yml/badge.svg)](https://github.com/Packablock/packablock-web/actions/workflows/ci.yml)
 
 Packablock orchestrates **decentralized, zero-trust package attestation and supply chain trust ledgers** to protect developer workflows from split-timeline attacks, dependency regressions, and malicious software injections.
 
@@ -36,6 +36,10 @@ A secure, high-performance Fastify server backed by SQLite that acts as the sove
 
 ### 3. [Windmill Workflows Template](https://github.com/Packablock/packablock-client/tree/main/windmill)
 A template for [windmill.dev](https://windmill.dev) worker orchestration enabling traceable, idempotent, and self-hosted validation DAGs for auditing workspaces in high-scale enterprise registries.
+
+### 4. [Packablock Web Dashboard](https://github.com/Packablock/packablock-web)
+A zero-trust administrative Web Dashboard, implemented as a Ruby on Rails 8 application querying Fastify registry endpoints and rendering premium controls, telemetry metrics, and authorization actions.
+
 
 ---
 
