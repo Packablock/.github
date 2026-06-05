@@ -14,19 +14,19 @@ The Packablock ecosystem is partitioned into modular, highly cohesive components
 
 ```mermaid
 graph TD
-    Developer[💻 Developer / CI Runner] -- "Signs Code & Manifests" --> PBLK["📦 pblk CLI Client (Bun)"]
-    PBLK -- "1. Standalone Verification" --> Local[🔒 Local packablock.yaml Chain]
-    PBLK -- "2. Anchored Log Push" --> Registry["🏛️ Packablock Registry (Fastify/SQLite)"]
+    Developer[💻 Developer / CI Runner] -- "Signs Code & Manifests" --> PKABLK["📦 pkablk CLI Client (Bun)"]
+    PKABLK -- "1. Standalone Verification" --> Local[🔒 Local packablock.yaml Chain]
+    PKABLK -- "2. Anchored Log Push" --> Registry["🏛️ Packablock Registry (Fastify/SQLite)"]
     Registry -- "HMAC-SHA256 Signed Event Alerts" --> Webhooks["⚡ Outbound Alerts / pipelines"]
     Registry -- "Workflows & DAG Orchestration" --> Windmill["⚙️ Windmill.dev Integration"]
 ```
 
-### 1. [pblk CLI Client](https://github.com/Packablock/packablock-client)
+### 1. [pkablk CLI Client](https://github.com/Packablock/packablock-client)
 A lightweight Bun-based developer command-line interface and binary executable that coordinates SBOM baselines, cryptographic appends, and local ledger checks:
-* **`pblk init`**: Baselines package lockfiles to build the Genesis block.
-* **`pblk check`**: Offline constant-memory verification (Standalone Mode) or online anchored verification against the registry (`--server`).
-* **`pblk pack`**: Bundles verified dependencies and signed release assets into safe tarballs.
-* **`pblk rollover`**: Rotates client keys and securely chains old metadata hashes across rollover boundaries.
+* **`pkablk init`**: Baselines package lockfiles to build the Genesis block.
+* **`pkablk check`**: Offline constant-memory verification (Standalone Mode) or online anchored verification against the registry (`--server`).
+* **`pkablk pack`**: Bundles verified dependencies and signed release assets into safe tarballs.
+* **`pkablk rollover`**: Rotates client keys and securely chains old metadata hashes across rollover boundaries.
 
 ### 2. [Packablock Supply Chain Trust Registry](https://github.com/Packablock/packablock-registry)
 A secure, high-performance Fastify server backed by SQLite that acts as the sovereign cryptographic log anchor for active workspaces:
@@ -34,7 +34,7 @@ A secure, high-performance Fastify server backed by SQLite that acts as the sove
 * **Interactive Trust Tree UI**: Built-in administrative dashboard serving undulating horizontal D3.js node-link trust ledgers, proportional epoch graphs, and deep-linkable hash routing.
 * **SemVer Webhooks**: Inbuilt HMAC-SHA256 signed event pipelines firing on `chain.pushed`, `package.added`, `package.updated`, and `health.warning` changes.
 
-### 3. [Windmill Workflows Template](https://github.com/Packablock/packablock-client/tree/main/windmill)
+### 3. [Windmill Workflows Template](https://github.com/Packablock/packablock-demo/tree/main/windmill)
 A template for [windmill.dev](https://windmill.dev) worker orchestration enabling traceable, idempotent, and self-hosted validation DAGs for auditing workspaces in high-scale enterprise registries.
 
 ### 4. [Packablock Web Dashboard](https://github.com/Packablock/packablock-web)
@@ -45,7 +45,7 @@ A zero-trust administrative Web Dashboard, implemented as a Ruby on Rails 8 appl
 
 ## 📊 SemVer Candle Graph Analysis
 
-The `pblk` client introduces visual risk modeling for supply chain verification by charting installation drift, constraint boundaries, and upstream registry availability directly in monospace printouts:
+The `pkablk` client introduces visual risk modeling for supply chain verification by charting installation drift, constraint boundaries, and upstream registry availability directly in monospace printouts:
 
 ```markdown
 -----------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ jq-web             >=1.0.0     1.0.0  |░░░░░░░░░░░░░�
 Packablock supports three isolated operational models:
 1. **Centrally Hosted SaaS**: Secure, ready-to-use cloud-anchored ledgers for development teams.
 2. **Enterprise BYOR (Bring Your Own Registry)**: Private, sovereign registries deployed in Docker / Cloud Run using standard Terraform modules.
-3. **Decentralized Standalone**: Mesh comparisons between peer logs (`pblk check --peer <url>`) for off-grid operations.
+3. **Decentralized Standalone**: Mesh comparisons between peer logs (`pkablk check --peer <url>`) for off-grid operations.
 
 ---
 
