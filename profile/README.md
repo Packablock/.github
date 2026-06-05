@@ -1,6 +1,6 @@
 # 🛡️ Packablock: Zero-Trust Supply Chain Trust Registry
 
-[![Registry CI Status](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml/badge.svg)](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml) [![Client CI Status](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml/badge.svg)](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml) [![Web CI Status](https://github.com/Packablock/packablock-web/actions/workflows/ci.yml/badge.svg)](https://github.com/Packablock/packablock-web/actions/workflows/ci.yml)
+[![Registry CI Status](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml) [![Client CI Status](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml) [![Web CI Status](https://github.com/Packablock/packablock-web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Packablock/packablock-web/actions/workflows/ci.yml)
 
 Packablock orchestrates **decentralized, zero-trust package attestation and supply chain trust ledgers** to protect developer workflows from split-timeline attacks, dependency regressions, and malicious software injections.
 
