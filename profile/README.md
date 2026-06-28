@@ -1,6 +1,13 @@
 # 🛡️ Packablock: Zero-Trust Supply Chain Trust Registry
 
-[![Registry CI Status](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml) [![Client CI Status](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml) [![Web CI Status](https://github.com/Packablock/packablock-web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Packablock/packablock-web/actions/workflows/ci.yml)
+<div align="center">
+
+[![Workspace Repo](https://img.shields.io/badge/workspace-Packablock-0E1B2E?style=for-the-badge&logo=github)](https://github.com/Packablock/packablock-workspace)
+[![Client CI Status](https://img.shields.io/github/actions/workflow/status/Packablock/packablock-client/ci.yml?branch=main&style=for-the-badge&label=Client%20CI)](https://github.com/Packablock/packablock-client/actions/workflows/ci.yml)
+[![Registry CI Status](https://img.shields.io/github/actions/workflow/status/Packablock/packablock-registry/ci.yml?branch=main&style=for-the-badge&label=Registry%20CI)](https://github.com/Packablock/packablock-registry/actions/workflows/ci.yml)
+[![Web CI Status](https://img.shields.io/github/actions/workflow/status/Packablock/packablock-web/ci.yml?branch=main&style=for-the-badge&label=Web%20CI)](https://github.com/Packablock/packablock-web/actions/workflows/ci.yml)
+
+</div>
 
 Packablock orchestrates **decentralized, zero-trust package attestation and supply chain trust ledgers** to protect developer workflows from split-timeline attacks, dependency regressions, and malicious software injections.
 
@@ -30,7 +37,7 @@ A lightweight Bun-based developer command-line interface and binary executable t
 
 ### 2. [Packablock Supply Chain Trust Registry](https://github.com/Packablock/packablock-registry)
 A secure, high-performance Fastify server backed by SQLite that acts as the sovereign cryptographic log anchor for active workspaces:
-* **Continuous Ingestion**: Secure rest endpoints (`/api/v1/log/push`) that process client signatures, Git OIDC runner claims, and log anchoring receipts.
+* **Continuous Ingestion**: Secure REST endpoints (`/api/v1/log/push`) that process client signatures, Git OIDC runner claims, and log anchoring receipts.
 * **Interactive Trust Tree UI**: Built-in administrative dashboard serving undulating horizontal D3.js node-link trust ledgers, proportional epoch graphs, and deep-linkable hash routing.
 * **SemVer Webhooks**: Inbuilt HMAC-SHA256 signed event pipelines firing on `chain.pushed`, `package.added`, `package.updated`, and `health.warning` changes.
 
@@ -40,6 +47,17 @@ A template for [windmill.dev](https://windmill.dev) worker orchestration enablin
 ### 4. [Packablock Web Dashboard](https://github.com/Packablock/packablock-web)
 A zero-trust administrative Web Dashboard, implemented as a Ruby on Rails 8 application querying Fastify registry endpoints and rendering premium controls, telemetry metrics, and authorization actions.
 
+---
+
+## 🛠️ Workspace Developer Tooling
+
+The root workspace includes unified utilities to orchestrate local development, test gates, and remote status:
+
+| Script | Purpose | Usage |
+| :--- | :--- | :--- |
+| [`scripts/check-builds.sh`](https://github.com/Packablock/packablock-workspace/blob/main/scripts/check-builds.sh) | Runs typechecking, Biome linters, and full test suites locally across all Node/Bun, Rails, and Jekyll repos. | `./scripts/check-builds.sh` |
+| [`scripts/check-github-activity.py`](https://github.com/Packablock/packablock-workspace/blob/main/scripts/check-github-activity.py) | Queries the GitHub API to display open issues, active PRs, latest CI runs, and releases for all repos. | `./scripts/check-github-activity.py` |
+| [`scripts/daily-standup.sh`](https://github.com/Packablock/packablock-workspace/blob/main/scripts/daily-standup.sh) | Consolidates emails, checks local git diffs, outputs current WIP, and pushes standup logs to the private workspace. | `./scripts/daily-standup.sh` |
 
 ---
 
