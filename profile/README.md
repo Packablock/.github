@@ -81,6 +81,46 @@ jq-web             >=1.0.0     1.0.0  |░░░░░░░░░░░░░�
 * **The Right Wick Ceiling (`═══|`)**: Showcases remaining safe minor/patch versions before hitting a breaking constraint.
 * **The Open Fuse (`► ∞`)**: Alerts developers instantly to unbounded version descriptors (`>=`) vulnerable to split-timeline regressions.
 
+**Candle Symbol Key:**
+* `|` : Constraint boundaries (minimum allowed version / breaking change ceiling)
+* `░` : Historical version drift (between initial release and current project baseline)
+* `●` : Your current pinned local version (from the lockfile)
+* `═` : Safe upstream updates available within your current constraint range
+* `►` : Unbounded operator indicator (`>=` or `*`) indicating infinite package exposure
+
+---
+
+## 🏃‍♀️ Contributor Quickstart
+
+If you want to contribute to Packablock, the primary workflows involve testing the CLI client, developing registry validation endpoints, or adding integration scenarios in the demo repository. Ensure you have [Bun](https://bun.sh) installed:
+
+### 1. Developing the CLI Client
+The client compiles SBOM metadata and runs security audits locally.
+```bash
+git clone https://github.com/Packablock/packablock-client.git
+cd packablock-client
+bun install
+bun start --help
+```
+
+### 2. Running the Registry Server
+The registry server validates client-pushed signatures and stores verification logs.
+```bash
+git clone https://github.com/Packablock/packablock-registry.git
+cd packablock-registry
+bun install
+bun run index.ts
+```
+
+### 3. Running Integration & E2E Tests
+To run verification scripts and test scenarios against a local registry:
+```bash
+git clone https://github.com/Packablock/packablock-demo.git
+cd packablock-demo
+bun install
+bun test
+```
+
 ---
 
 ## ⚡ Deployment & Enterprise Options
