@@ -1,4 +1,4 @@
-# 🛡️ Packablock: Zero-Trust Supply Chain Trust Registry
+# 🛡️ Packablock: Zero-Trust Supply Chain Policy Control
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 </div>
 
-Packablock orchestrates **decentralized, zero-trust package attestation and supply chain trust ledgers** to protect developer workflows from split-timeline attacks, dependency regressions, and malicious software injections.
+Packablock orchestrates **zero-trust package attestation and supply chain policy logs** to protect developer workflows from split-timeline attacks, dependency regressions, and malicious software injections.
 
 By combining native cryptographic signing (SSH/GPG), automated CI/CD gating, and real-time SemVer intelligence pipelines, Packablock guarantees absolute transparency and verification for all software artifacts.
 
@@ -28,16 +28,16 @@ graph TD
 ```
 
 ### 1. [pkablk CLI Client](https://github.com/Packablock/packablock-client)
-A lightweight Bun-based developer command-line interface and binary executable that coordinates SBOM baselines, cryptographic appends, and local ledger checks:
+A lightweight Bun-based developer command-line interface and binary executable that coordinates SBOM baselines, cryptographic appends, and local log checks:
 * **`pkablk init`**: Baselines package lockfiles to build the Genesis block.
 * **`pkablk check`**: Offline constant-memory verification (Standalone Mode) or online anchored verification against the registry (`--server`).
 * **`pkablk pack`**: Bundles verified dependencies and signed release assets into safe tarballs.
 * **`pkablk rollover`**: Rotates client keys and securely chains old metadata hashes across rollover boundaries.
 
-### 2. [Packablock Supply Chain Trust Registry](https://github.com/Packablock/packablock-registry)
-A secure, high-performance Fastify server backed by SQLite that acts as the sovereign cryptographic log anchor for active workspaces:
+### 2. [Packablock Supply Chain Policy Control Registry](https://github.com/Packablock/packablock-registry)
+A secure, high-performance Fastify server backed by SQLite that acts as the cryptographic log anchor for active workspaces:
 * **Continuous Ingestion**: Secure REST endpoints (`/api/v1/log/push`) that process client signatures, Git OIDC runner claims, and log anchoring receipts.
-* **Interactive Trust Tree UI**: Built-in administrative dashboard serving undulating horizontal D3.js node-link trust ledgers, proportional epoch graphs, and deep-linkable hash routing.
+* **Interactive Trust Tree UI**: Built-in administrative dashboard serving undulating horizontal D3.js node-link verification trees, proportional epoch graphs, and deep-linkable hash routing.
 
 ### 3. [Windmill Workflows Template](https://github.com/Packablock/packablock-demo/tree/main/windmill)
 A template for [windmill.dev](https://windmill.dev) worker orchestration enabling traceable, idempotent, and self-hosted validation DAGs for auditing workspaces in high-scale enterprise registries.
@@ -83,11 +83,11 @@ jq-web             >=1.0.0     1.0.0  |░░░░░░░░░░░░░�
 
 ---
 
-## ⚡ Deployment & Sovereign Options
+## ⚡ Deployment & Enterprise Options
 
 Packablock supports three isolated operational models:
-1. **Centrally Hosted SaaS**: Secure, ready-to-use cloud-anchored ledgers for development teams.
-2. **Enterprise BYOR (Bring Your Own Registry)**: Private, sovereign registries deployed in Docker / Cloud Run using standard Terraform modules.
+1. **Centrally Hosted SaaS**: Secure, ready-to-use cloud-anchored logs for development teams.
+2. **Enterprise BYOR (Bring Your Own Registry)**: Private, self-hosted registries deployed in Docker / Cloud Run using standard Terraform modules.
 3. **Decentralized Standalone**: Mesh comparisons between peer logs (`pkablk check --peer <url>`) for off-grid operations.
 
 ---
