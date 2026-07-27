@@ -47,18 +47,6 @@ A zero-trust administrative Web Dashboard, implemented as a Ruby on Rails 8 appl
 
 ---
 
-## 🛠️ Workspace Developer Tooling
-
-The root workspace includes unified utilities to orchestrate local development, test gates, and remote status:
-
-| Script | Purpose | Usage |
-| :--- | :--- | :--- |
-| `scripts/check-builds.sh` | Runs typechecking, Biome linters, and full test suites locally across all Node/Bun, Rails, and Jekyll repos. | `./scripts/check-builds.sh` |
-| `scripts/check-github-activity.py` | Queries the GitHub API to display open issues, active PRs, latest CI runs, and releases for all repos. | `./scripts/check-github-activity.py` |
-| `scripts/daily-standup.sh` | Consolidates emails, checks local git diffs, outputs current WIP, and pushes standup logs to the private workspace. | `./scripts/daily-standup.sh` |
-
----
-
 ## 📊 SemVer Candle Graph Analysis
 
 The `pkablk` client introduces visual risk modeling for supply chain verification by charting installation drift, constraint boundaries, and upstream registry availability directly in monospace printouts:
