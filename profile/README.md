@@ -1,4 +1,4 @@
-# 🛡️ Packablock: Zero-Trust Supply Chain Policy Control
+# 🛡️ Packablock: Deterministic Supply Chain Policy Control
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 </div>
 
-Packablock orchestrates **zero-trust package attestation and supply chain policy logs** to protect developer workflows from split-timeline attacks, dependency regressions, and malicious software injections.
+Packablock orchestrates **deterministic package attestation and supply chain policy logs** to protect developer workflows from split-timeline attacks, dependency regressions, and malicious software injections.
 
 By combining native cryptographic signing (SSH/GPG), automated CI/CD gating, and real-time SemVer intelligence pipelines, Packablock guarantees absolute transparency and verification for all software artifacts.
 
@@ -43,7 +43,7 @@ A secure, high-performance Fastify server backed by SQLite that acts as the cryp
 A template for [windmill.dev](https://windmill.dev) worker orchestration enabling traceable, idempotent, and self-hosted validation DAGs for auditing workspaces in high-scale enterprise registries.
 
 ### 4. [Packablock Web Dashboard](https://github.com/Packablock/packablock-web)
-A zero-trust administrative Web Dashboard, implemented as a Ruby on Rails 8 application querying Fastify registry endpoints and rendering premium controls, telemetry metrics, and authorization actions.
+A deterministic administrative Web Dashboard, implemented as a Ruby on Rails 8 application querying Fastify registry endpoints and rendering premium controls, telemetry metrics, and authorization actions.
 
 ---
 
@@ -121,5 +121,5 @@ Packablock supports three isolated operational models:
 ---
 
 <div align="center">
-  <sub>© 2026 Packablock Inc. Protecting the software ecosystem with cryptographic zero-trust rails.</sub>
+  <sub>© 2026 Packablock Inc. Protecting the software ecosystem with cryptographic deterministic rails.</sub>
 </div>
